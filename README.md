@@ -61,7 +61,17 @@ This will automatically open http://localhost:3000
   node_modules/.bin/sequelize migration:create --name add-column-Users
 ```
 
-## 刪除DB欄位
+## 回復上一動
+
+```bash
+  node_modules/.bin/sequelize db:migrate:undo
+```
+
+## 回復指定遷移
+```bash
+  node_modules/.bin/sequelize db:migrate:undo:all --to 20200205093308-create-user.js
+```
+
 
 #
 Copyright (c) 2020-present Louis Ko
