@@ -5,11 +5,11 @@
 ```bash
 # clone the project
 
-git clone https://github.com/LouisKoXiang/Sequelize-express-mysql.git
+git clone https://github.com/LouisKoXiang/express-sequelize-mysql.git
 
 # enter the project directory
 
-cd Sequelize-express-mysql
+cd express-sequelize-mysql
 
 # Set config/config with mysql
 {
