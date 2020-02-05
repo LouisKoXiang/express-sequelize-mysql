@@ -4,12 +4,12 @@
     "password": "",
     "database": "",
     "host": "",
-    "operatorsAliases": "",
+    "operatorsAliases": false,
     "dialect": "mysql",
     "pool": {
-      "max": "",
-      "min": "",
-      "idle": ""
+      "max": 1,
+      "min": 0,
+      "idle": 1000
     }
   },
   "test": {

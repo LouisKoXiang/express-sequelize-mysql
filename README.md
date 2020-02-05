@@ -46,7 +46,7 @@ This will automatically open http://localhost:3000
 ## Step2 建立 User datatable
 
 ```bash
-  node_modules/.bin/sequelize model:generate --name user --attributes name:string,age:integer,gender:string
+  node_modules/.bin/sequelize model:generate --name User --attributes name:string,age:integer,gender:string
 ```
 
 ## Step3 部署到你的資料庫
@@ -54,5 +54,14 @@ This will automatically open http://localhost:3000
 ```bash
   node_modules/.bin/sequelize db:migrate
 ```
+
+## 新增DB欄位
+
+```bash
+  node_modules/.bin/sequelize migration:create --name add-column-Users
+```
+
+## 刪除DB欄位
+
 #
 Copyright (c) 2020-present Louis Ko
