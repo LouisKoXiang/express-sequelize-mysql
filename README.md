@@ -11,7 +11,7 @@ git clone https://github.com/LouisKoXiang/express-sequelize-mysql.git
 
 cd express-sequelize-mysql
 
-# Set config/config with mysql
+# Set config/config database (mysql or sqlite or pgsql ...)
 {
   "username": "",
   "password": "",
@@ -36,7 +36,7 @@ npm run start
 This will automatically open http://localhost:3000
 
 # DB
-# 可直接跳到 Step3
+## 可直接跳到 Step3
 
 ## Step1 sequelize 環境前置
 `````````````
@@ -89,6 +89,21 @@ This will automatically open http://localhost:3000
   "node_modules/.bin/sequelize" db:migrate:undo:all --to 20200205093308-create-user.js
 ```
 
+# Demo Api
+
+````bash
+  # Create User {{POST}} Body -> name,age,gender
+  http://localhost:3000/api/user
+
+  # Select {{GET}}
+  http://localhost:3000/api/user
+
+  # Select by Id {{Get}}
+  http://localhost:3000/api/user/:{{id}}
+
+  # updated by id {{Put}}
+  http://localhost:3000/api/user/:{{id}}
+````
 
 #
 Copyright (c) 2020-present Louis Ko
