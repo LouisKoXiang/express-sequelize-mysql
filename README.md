@@ -36,6 +36,7 @@ npm run start
 This will automatically open http://localhost:3000
 
 # DB
+# 可直接跳到 Step3
 
 ## Step1 sequelize 環境前置
 `````````````
@@ -45,31 +46,47 @@ This will automatically open http://localhost:3000
 
 ## Step2 建立 User datatable
 
-```bash
+```bash 
+  # Liunx
   node_modules/.bin/sequelize model:generate --name User --attributes name:string,age:integer,gender:string
+
+  # windows
+  "node_modules/.bin/sequelize" model:generate --name User --attributes name:string,age:integer,gender:string
 ```
 
 ## Step3 部署到你的資料庫
 
 ```bash
+  # Liunx
   node_modules/.bin/sequelize db:migrate
+  # windows
+  "node_modules/.bin/sequelize" db:migrate
 ```
 
 ## 新增DB欄位
 
 ```bash
+  # Liunx
   node_modules/.bin/sequelize migration:create --name add-column-Users
+  # windows
+  "node_modules/.bin/sequelize" migration:create --name add-column-Users
 ```
 
 ## 回復上一動
 
 ```bash
+  # Liunx
   node_modules/.bin/sequelize db:migrate:undo
+  # windows
+  "node_modules/.bin/sequelize" db:migrate:undo
 ```
 
 ## 回復指定遷移
 ```bash
+  # Liunx
   node_modules/.bin/sequelize db:migrate:undo:all --to 20200205093308-create-user.js
+  # windows
+  "node_modules/.bin/sequelize" db:migrate:undo:all --to 20200205093308-create-user.js
 ```
 
 
